@@ -1,20 +1,31 @@
 $( document ).ready(function() {
 	
-	function hola() {
+	function theyreHere() {
 		
 		$("#m4k3_monk3ys_g0_div").hide();
 		clearInterval(initialMonkeySpam);
 		
 		// Phase 2: The Rave
-	
+		
 		// ¡Música, maestro!
-		var djBananas = new Audio(chrome.runtime.getURL('mewsick/4.mp3'));
+		djBananas = new Audio(chrome.runtime.getURL('mewsick/4.mp3'));
 		djBananas.addEventListener('ended', changeSong, false);
 		djBananas.play();
 		
+		// Fullscreen
+        // https://stackoverflow.com/questions/7495373/how-to-make-browser-full-screen-using-f11-key-event-through-javascript
+        // var el = document.documentElement
+            // , rfs = // for newer Webkit and Firefox
+                // el.requestFullScreen
+                // || el.webkitRequestFullScreen
+                // || el.mozRequestFullScreen
+                // || el.msRequestFullScreen
+            // ;
+        // if (typeof rfs != "undefined" && rfs) {
+            // rfs.call(el);
+        // } 
 		
 		// Initial massive image change
-		//$("img").attr("src",monkeys[Math.floor(Math.random()*monkeys.length)]);
 		$("img").each(function( index ) {
 				$(this).attr("src",monkeys[Math.floor(Math.random()*monkeys.length)]);
 			});
@@ -72,7 +83,14 @@ $( document ).ready(function() {
 	}
 	
 	function changeSong() {
-		djBananas = new Audio(bangers[Math.floor(Math.random()*bangers.length)]);
+		let randomSongIndex = Math.floor(Math.random()*bangers.length);
+		
+		while (randomSongIndex == lastSongIndex) {
+			randomSongIndex = Math.floor(Math.random()*bangers.length);
+		}
+		
+		lastSongIndex = randomSongIndex;
+		djBananas = new Audio(bangers[randomSongIndex]);
 		djBananas.addEventListener('ended', changeSong, false);
 		djBananas.play();
 	}
@@ -91,16 +109,20 @@ $( document ).ready(function() {
 		$("*").css("background-image", "url(" + chrome.runtime.getURL('monkeys/baby.gif'));
 	}
 
+	// Add stylesheet
 	let monkeysGoStylesheet = '<link rel="stylesheet" type="text/css" href="' + chrome.runtime.getURL('content_scripts/makemonkeysgo.css') + '">';
 	$("head").append(monkeysGoStylesheet);
-	// $("body").append('<div id="m4k3_monk3ys_g0_div" class="m4k3_monk3ys_g0" style="display:none"> MAKE THE MONKEYS GO </div>');
 	$("body").append('<div id="m4k3_monk3ys_g0_div" class="m4k3_monk3ys_g0_container"> <div class="m4k3_monk3ys_g0"> MAKE THE MONKEYS GO </div> </div>');
-	$("#m4k3_monk3ys_g0_div").click(hola);
+	$("#m4k3_monk3ys_g0_div").click(theyreHere);
 
+	// Get all monkeys and songs
 	var bangers = [];
 	var monkeys = [];
 	
-	for (let i = 1; i <= 4; i++) {
+	var djBananas;
+	var lastSongIndex = 3;
+	
+	for (let i = 1; i <= 6; i++) {
 		bangers.push(chrome.runtime.getURL(`mewsick/${i}.mp3`));
 	}
 	
