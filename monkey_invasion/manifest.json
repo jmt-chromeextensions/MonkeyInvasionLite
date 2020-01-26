@@ -30,6 +30,7 @@
   ],
   
   "web_accessible_resources": [
+	"content_scripts/makemonkeysgo.css",
 	"monkeys/*",
 	"mewsick/*"
 	]

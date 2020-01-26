@@ -1,0 +1,26 @@
+.m4k3_monk3ys_g0_container {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 999;
+}
+
+.m4k3_monk3ys_g0 {
+	margin: 15% auto 0 auto;
+	z-index: 1000;
+  
+	padding: 20px;
+	background-color: #F44336;
+	color: white;
+	FONT-SIZE: -webkit-xxx-large;
+	width: fit-content;
+	border-style: solid;
+	border-color: black;
+	cursor: pointer;
+	font-family: fantasy;
+}
+
