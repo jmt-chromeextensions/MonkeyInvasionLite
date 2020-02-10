@@ -3,7 +3,7 @@
   "name": "Monkey Invasion",
   "description": "Monkeys just want to have fun.",
   "short_name": "MonkeyInvasion",
-  "version": "1.0.0.2",
+  "version": "1.0.0.3",
   
   "description": "",
   "icons": {
@@ -23,10 +23,6 @@
         "content_scripts/they_re_here.js"
       ]
     }
-  ],
-  
-  "permissions": [
-    "activeTab"
   ],
   
   "web_accessible_resources": [
