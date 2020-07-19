@@ -20,12 +20,14 @@
       "js": [
         "jquery/jquery-3.4.1.min.js",
         "content_scripts/they_re_here.js"
+      ],
+      "css": [
+        "styles/makemonkeysgo.css"
       ]
     }
   ],
   
   "web_accessible_resources": [
-	"content_scripts/makemonkeysgo.css",
 	"monkeys/*",
 	"mewsick/*"
 	]
