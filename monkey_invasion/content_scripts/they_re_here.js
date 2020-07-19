@@ -33,7 +33,7 @@ $(document).ready(function () {
 	var lastSongIndex = 0;
 
 	var monkey_soldiers = [];
-	monkeysEnsemble();
+	monkeysAssemble();
 
 	// Monkey loader and bait button
 
@@ -90,7 +90,7 @@ $(document).ready(function () {
 
 	}, 2000);
 
-	function monkeysEnsemble() {
+	function monkeysAssemble() {
 		debugger;
 		MONKEYS.forEach(monkey => {
 			let img = new Image();
