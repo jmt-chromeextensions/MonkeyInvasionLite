@@ -88,7 +88,7 @@ $(document).ready(function () {
 
 		}, 50);
 
-	}, 2000);
+	}, 3000);
 
 	function monkeysAssemble() {
 		debugger;
@@ -196,7 +196,7 @@ $(document).ready(function () {
 
 	function babyVegeta() {
 		$("img").attr("src", BABY_VEGETA);
-		$("*").css("background-image", BABY_VEGETA);
+		$("*").css("background-image", "url(" + BABY_VEGETA);
 	}
 
 });
