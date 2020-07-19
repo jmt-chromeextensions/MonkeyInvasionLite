@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "Monkey Invasion",
+  "name": "Monkey Invasion Lite",
   "description": "Monkeys just want to have fun.",
-  "short_name": "MonkeyInvasion",
-  "version": "1.0.0.5",
+  "short_name": "MonkeyInvasionLite",
+  "version": "1.0.0.0",
   
   "icons": {
     "16": "extension_icons/monkeyinvasion-16.png",
