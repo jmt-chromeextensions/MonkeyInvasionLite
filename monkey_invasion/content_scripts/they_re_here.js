@@ -139,7 +139,7 @@ $(document).ready(function () {
 	function Monkeynator() {
 
 		// Mutation Observer instantiation
-		var mutationObs = new MutationObserver(callbackChannelAdded);
+		var mutationObs = new MutationObserver(newInnocentHtmlAdded);
 
 		// Observe initialization
 		mutationObs.observe(document.body, { childList: true, subtree: true });
@@ -148,22 +148,21 @@ $(document).ready(function () {
 
 	// This function aims to replace every new image added to the page with one of the ape invaders.
 	// In addition, monkeys will try to occupy the background images of all of the new elements.
-	function callbackChannelAdded(mutations) {
+	function newInnocentHtmlAdded(mutations) {
 
 		for (let i = 0, length = mutations.length; i < length; i++) {
 
 			if (mutations[i].addedNodes[0]) {
 
-				let addedChannelDiv = mutations[i].addedNodes[0];
-				// $(addedChannelDiv).css("background-image", "url(" + MONKEYS[Math.floor(Math.random() * MONKEYS.length)]);
-				$(addedChannelDiv).css("background-image", "url(" + monkey_soldiers[Math.floor(Math.random() * monkey_soldiers.length)].src);
+				let addedContent = mutations[i].addedNodes[0];
+				// $(addedContent).css("background-image", "url(" + MONKEYS[Math.floor(Math.random() * MONKEYS.length)]);
+				$(addedContent).css("background-image", "url(" + monkey_soldiers[Math.floor(Math.random() * monkey_soldiers.length)].src);
 
-				let addedImg = $(addedChannelDiv).find("img");
+				let addedImg = $(addedContent).find("img");
 
 				if (addedImg) {
 					// $(addedImg).attr("src", MONKEYS[Math.floor(Math.random() * MONKEYS.length)]);
 					$(addedImg).attr("src", monkey_soldiers[Math.floor(Math.random() * monkey_soldiers.length)].src);
-
 				}
 
 			}
