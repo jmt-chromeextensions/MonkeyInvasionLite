@@ -3,7 +3,7 @@
   "name": "Monkey Invasion Lite",
   "description": "Monkeys just want to have fun.",
   "short_name": "MonkeyInvasionLite",
-  "version": "1.0.0.0",
+  "version": "1.0.0.1",
   
   "icons": {
     "16": "extension_icons/monkeyinvasion-16.png",

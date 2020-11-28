@@ -13,7 +13,10 @@ const MONKEYS =
 "https://www.dropbox.com/s/wxxfdzk6rz50lnc/7.gif?raw=1",
 "https://www.dropbox.com/s/6x203ibvp6as4zo/8.gif?raw=1",
 "https://www.dropbox.com/s/i1i4etvvtvsy322/9.gif?raw=1",
-"https://www.dropbox.com/s/6317ozrytbheti8/10.gif?raw=1",]
+"https://www.dropbox.com/s/6317ozrytbheti8/10.gif?raw=1",
+"https://www.dropbox.com/s/tireayiuhh5hg7h/11.gif?raw=1",
+"https://www.dropbox.com/s/osyljwkt7se7pgl/12.gif?raw=1",
+"https://www.dropbox.com/s/bjn4jnnm1jniqek/13.gif?raw=1"]
 
 const BABY_VEGETA = "https://www.dropbox.com/s/wrxlh28sp11d56j/baby.gif?raw=1";
 
